@@ -32,8 +32,8 @@ async def call_gemini(prompt: str) -> str:
 
 #response dictionary
 RESPONSES = {
-    "jared": "No mention of scary Scottish man :(",
-    "niamh": "she's too nice to aryan (my master) to insult her, the only insult is the 'man' she's dating",
+    "jared": "Greatest Scottish man of all time",
+    "niamh": "Greatest Scottish woman of all time",
     "valorant": "Why don't we play rivals instead?",
     "rivals": "Best game ever btw",
     "emily": "Bug lady 🐞",
@@ -47,7 +47,7 @@ RESPONSES = {
     "shit": "do you think swearing makes you cool?",
     "piss": "do you think swearing makes you cool?",
     "cunt": "do you think swearing makes you cool?",
-    "hi bot": "fuck off",
+    "hi bot": "fuck off (sorry aryan makes me say that I actually love you guys :(",
     "sean": "the unc",
     "ava": "aryan (my master) does not know you well enough to feel comfortable insulting you, get on rivals."
 }
