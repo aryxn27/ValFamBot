@@ -94,8 +94,7 @@ async def hello(interaction: discord.Interaction):
     await interaction.response.send_message(f"Hello {interaction.user.name}!")
 @bot.tree.command(name = "jared", description = "scottish man", guild=guild)
 async def jared(interaction: discord.Interaction):
-    await interaction.response.send_message("ew scottish man!")
-
+    await interaction.response.send_message("#1 Radiant")
 
 @bot.event
 async def on_message(message: discord.Message):
