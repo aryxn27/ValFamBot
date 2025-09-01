@@ -24,7 +24,7 @@ def keep_alive():
 #loading environment variables
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD_ID = int(os.getenv('VAL_FAM_ID'))
+GUILD_ID = int(os.getenv('TEST_ID'))
 GEMINI_KEY = os.getenv('GEMINI_KEY')
 
 intents = discord.Intents.default()
