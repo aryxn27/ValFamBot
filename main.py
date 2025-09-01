@@ -6,7 +6,20 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import google.generativeai as genai
 import asyncio
+from flask import Flask
+from threading import Thread
 
+#server ping code
+app = Flask("")
+
+@app.route("/")
+def home():
+    return "Bot is still alive!"
+def run():
+    app.run(host="0.0.0.0", port = 8080)
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
 
 #loading environment variables
 load_dotenv()
@@ -97,4 +110,6 @@ async def on_message(message: discord.Message):
 if __name__ == "__main__":
     if not TOKEN:
         raise RuntimeError("no DISCORD_TOKEN FOUND in environment")
+    # main code ping
+    keep_alive()
     bot.run(TOKEN)
