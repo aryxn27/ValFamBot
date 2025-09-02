@@ -16,6 +16,7 @@ app = Flask("")
 def home():
     return "Bot is still alive!"
 def run():
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port = 8080)
 def keep_alive():
     t = Thread(target=run)
@@ -111,4 +112,9 @@ if __name__ == "__main__":
         raise RuntimeError("no DISCORD_TOKEN FOUND in environment")
     # main code ping
     keep_alive()
-    bot.run(TOKEN)
+    while True:
+        try:
+            bot.run(TOKEN)
+        except Exception as e:
+            print(f"Bot crashed with error {e}. Restarting...")
+            asyncio.sleep(5)
