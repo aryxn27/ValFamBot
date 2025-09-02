@@ -72,12 +72,12 @@ guild = discord.Object(id=GUILD_ID)
 
 #Tree Commands
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-@bot.tree.command(name="talk_to_bum", description="Activate AI mode", guild = guild)
+@bot.tree.command(name="talk_to_landshark", description="Activate AI mode", guild = guild)
 @app_commands.describe(question = "Say something: ")
 
 async def ask_the_bum(interaction, question: str):
     await interaction.response.defer()
-    question = question + ". Give a short, concise answer but be nice."
+    question = question + ". Give a short, concise answer but be nice. Occasionally make a shark noise but don't do it after every message, something like 'mmrkk'"
     reply = await call_gemini(question)
     await interaction.followup.send(reply)
 
