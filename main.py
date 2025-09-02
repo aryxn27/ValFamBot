@@ -72,7 +72,7 @@ guild = discord.Object(id=GUILD_ID)
 
 #Tree Commands
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-@bot.tree.command(name="ask_aryan", description="Activate AI mode", guild = guild)
+@bot.tree.command(name="talk_to_bum", description="Activate AI mode", guild = guild)
 @app_commands.describe(question = "Say something: ")
 
 async def ask_the_bum(interaction, question: str):
